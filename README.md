@@ -8,6 +8,13 @@ Note: The canvas must be created with the WEBGL parameter as in the exammple bel
 
 See the live [demo](https://prossel.github.io/WEBGL_record_video/demo/) page to test it.
 
+## Basic use
+
+* Add the library in index.html
+* Add a call to `VideoRecorder.addButton();` in your `setup()` function.
+
+ See Getting started section below for more details.
+
 ## Getting started
 
 1. Create a new sketch on https://editor.p5js.org/
@@ -53,11 +60,6 @@ See the live [demo](https://prossel.github.io/WEBGL_record_video/demo/) page to 
 1. Click the play button. See the `Record video` button ?
 1. Click it, wait a few seconds and click again to stop. 
 1. The recorded video is added at the bottom of the page with a download link.
-
-## Basic use
-
-* Add the library in index.html (see Getting started section)
-* Add a call to `VideoRecorder.addButton();` in your `setup()` function.
 
 ## Advanced use
 
