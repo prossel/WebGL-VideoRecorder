@@ -6,7 +6,7 @@ Note: The canvas must be created with the WEBGL parameter as in the exammple bel
 
 ## Live demo
 
-See the live [demo](demo) page to test it.
+See the live [demo](https://prossel.github.io/WEBGL_record_video/demo/) page to test it.
 
 ## Getting started
 
