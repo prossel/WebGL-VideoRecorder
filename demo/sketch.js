@@ -6,33 +6,25 @@ function preload() {
 
 function setup() {
 
-  createCanvas(1920, 1080, WEBGL);
+  createCanvas(400, 300, WEBGL);
+  pixelDensity(1);
 
   smooth();
-
-  // Reduce size of preview
-  let scalePreview = 0.25;
-  let cnv = document.getElementById('defaultCanvas0');
-  cnv.style.width = round(width * scalePreview) + "px";
-  cnv.style.height = round(height * scalePreview) + "px";
 
   VideoRecorder.addButton();
   
   textAlign(CENTER, CENTER);
-  textSize(200);
+  textSize(40);
   textFont(myFont);
 }
 
 function draw() {
   background(220);
 
-  push();
-  //translate(width / 2, height/2);
   rotateY(frameCount * 0.01);
-  text("Hello World", 0, 200);
-  pop();
-  
-  rotateY(-frameCount * 0.01);
-  translate(0, -200);
-  box(400);
+  text("WebGL\nVideoRecorder", 0, 40);
+
+  rotateY(-frameCount * 0.02);
+  translate(0, -60);
+  box(80);
 }

@@ -73,6 +73,9 @@ It can be converted to the more popular MP4 file format with some video tools or
 1. Click the play button. See the `Record video` button ?
 1. Click it, wait a few seconds and click again to stop.
 1. The recorded video is added at the bottom of the page with a download link.
+1. If the video does not have the same size as the canvas, see [Double size video](#double-size-video) below
+
+Final result: <https://editor.p5js.org/prossel/sketches/HjKjai1gG>
 
 ## Advanced use
 
@@ -80,7 +83,10 @@ It can be converted to the more popular MP4 file format with some video tools or
 
 You can also start / stop the recording from the code. You only need to call `VideoRecorder.record();`  and `VideoRecorder.stop();` when appropriate.
 
+Live demo: <https://editor.p5js.org/prossel/full/imTyCpxQT>
+
 For example to record the first 60 frames of an animation:
+
 
 ```js
 function setup() {
@@ -106,8 +112,6 @@ function draw() {
 }
 ```
 
-Test the demo at <https://editor.p5js.org/prossel/sketches/imTyCpxQT>
-
 ### Double size video
 
 When using a high resolution display, such as Retina, the video may have more pixels than the canvas size.
@@ -127,12 +131,17 @@ function setup() {
 
 The video has the size of the canvas or the double if using a high resolution screen, such as Retina display.
 
-If you want a specific size, use is to create the canvas. If the canvas is then too big to fit in the window, you  may want to scale it with this code:
+If you want a specific size, use is to create the canvas. If the canvas is then too big to fit in the window, you  may want to scale it with this code with CSS.
+
+To avoid a different size with high resolution display, use pixelDensity(1) to force video and canvas to have the same size.
+
+Live demo: https://editor.p5js.org/prossel/full/ps04GUidy
 
 ```js
 function setup() { 
 
     createCanvas(1920, 1080, WEBGL);
+    pixelDensity(1);
 
     // Reduce size of preview
     let scalePreview = 0.25;
@@ -142,5 +151,4 @@ function setup() {
 
     VideoRecorder.addButton();
 }
-
 ```
