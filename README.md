@@ -10,6 +10,12 @@ See the live [demo](https://prossel.github.io/WebGL-VideoRecorder/demo/) page to
 
 Click the button to start, then stop recording and view or download the recorded video.
 
+## WebM video file format
+
+The script will produce a [WebM](https://en.wikipedia.org/wiki/WebM) video file (*.webm).
+
+It can be converted more popular MP4 file format with some video tools or online services such as <https://cloudconvert.com/webm-to-mp4>
+
 ## Basic use
 
 * Add the library in the `<head>` section of index.html
