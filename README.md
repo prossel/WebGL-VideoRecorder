@@ -14,7 +14,7 @@ Click the button to start, then stop recording and view or download the recorded
 
 The script will produce a [WebM](https://en.wikipedia.org/wiki/WebM) video file (*.webm).
 
-It can be converted to more popular MP4 file format with some video tools or online services such as <https://cloudconvert.com/webm-to-mp4>
+It can be converted to the more popular MP4 file format with some video tools or online services such as <https://cloudconvert.com/webm-to-mp4>
 
 ## Basic use
 
@@ -83,22 +83,27 @@ You can also start / stop the recording from the code. You only need to call `Vi
 For example to record the first 60 frames of an animation:
 
 ```js
-    function setup() {
-        
-        // ...
+function setup() {
+    
+    // ...
 
-        VideoRecorder.addButton();
+    VideoRecorder.addButton();
+}
+
+function draw() {
+
+    // ...
+
+    // Start recording at frame 1
+    if (frameCount == 1) {
         VideoRecorder.record();
     }
 
-    function draw() {
-
-        // ...
-
-        if (frameCount == 60) {
-            VideoRecorder.stop();
-        }
+    // Stop video recording automatically after 60 frames
+    if (frameCount == 60) {
+        VideoRecorder.stop();
     }
+}
 ```
 
 Test the demo at <https://editor.p5js.org/prossel/sketches/imTyCpxQT>
@@ -112,8 +117,8 @@ When you want the video to have exactly the same size as the canvas, whatever th
 ```js
 function setup() { 
 
-  createCanvas(1920, 1080, WEBGL);
-  pixelDensity(1);
+    createCanvas(1920, 1080, WEBGL);
+    pixelDensity(1);
 
 }
 ```
@@ -127,15 +132,15 @@ If you want a specific size, use is to create the canvas. If the canvas is then 
 ```js
 function setup() { 
 
-  createCanvas(1920, 1080, WEBGL);
+    createCanvas(1920, 1080, WEBGL);
 
-  // Reduce size of preview
-  let scalePreview = 0.25;
-  let cnv = document.getElementById('defaultCanvas0');
-  cnv.style.width = round(width * scalePreview) + "px";
-  cnv.style.height = round(height * scalePreview) + "px";
+    // Reduce size of preview
+    let scalePreview = 0.25;
+    let cnv = document.getElementById('defaultCanvas0');
+    cnv.style.width = round(width * scalePreview) + "px";
+    cnv.style.height = round(height * scalePreview) + "px";
 
-  VideoRecorder.addButton();
+    VideoRecorder.addButton();
 }
 
 ```
