@@ -14,7 +14,7 @@ Click the button to start, then stop recording and view or download the recorded
 
 The script will produce a [WebM](https://en.wikipedia.org/wiki/WebM) video file (*.webm).
 
-It can be converted more popular MP4 file format with some video tools or online services such as <https://cloudconvert.com/webm-to-mp4>
+It can be converted to more popular MP4 file format with some video tools or online services such as <https://cloudconvert.com/webm-to-mp4>
 
 ## Basic use
 
