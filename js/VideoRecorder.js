@@ -47,7 +47,11 @@ class VideoRecorder {
     this.btn.innerHTML = "Record video";
     this.btn.style.margin = "10px";
     this.btn.onclick = () => this.record();
-    document.body.append(this.btn);
+
+    let div = document.createElement("div")
+    div.append(this.btn)
+    
+    document.body.append(div);
   }
 
   static exportVideo(e) {
